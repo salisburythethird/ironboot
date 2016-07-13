@@ -27,6 +27,7 @@
       <sprite>sprites\spr_death_block</sprite>
       <sprite>sprites\spr_goal</sprite>
       <sprite>sprites\spr_boundary</sprite>
+      <sprite>sprites\spr_moving_platform</sprite>
     </sprites>
     <sprites name="enemies">
       <sprite>sprites\spr_ant</sprite>
@@ -69,6 +70,12 @@
       <background>background\tile_2</background>
       <background>background\bush_1</background>
       <background>background\bush_2</background>
+      <background>background\vine_up</background>
+      <background>background\vine_end_up</background>
+      <background>background\vine_end_down</background>
+      <background>background\vine_side</background>
+      <background>background\vine_end_side_left</background>
+      <background>background\vine_end_side_right</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths">
@@ -84,6 +91,12 @@
     </paths>
   </paths>
   <scripts name="scripts">
+    <scripts name="platform_controls">
+      <script>scripts\scr_plat_down.gml</script>
+      <script>scripts\scr_plat_up.gml</script>
+      <script>scripts\scr_plat_left.gml</script>
+      <script>scripts\scr_plat_right.gml</script>
+    </scripts>
     <scripts name="fly_control">
       <script>scripts\scr_fly_right.gml</script>
       <script>scripts\scr_fly_left.gml</script>
@@ -116,14 +129,16 @@
       <object>objects\death_block</object>
       <object>objects\obj_boundary</object>
       <object>objects\obj_derp_sun</object>
+      <object>objects\obj_platform_v</object>
+      <object>objects\obj_platform_h</object>
     </objects>
     <objects name="control">
+      <object>objects\obj_play_button</object>
       <object>objects\obj_level_exit</object>
       <object>objects\obj_deactivation</object>
       <object>objects\obj_background_controller</object>
       <object>objects\cont_view</object>
       <object>objects\cont_music</object>
-      <object>objects\obj_play_button</object>
       <object>objects\effect_screenshake</object>
     </objects>
     <objects name="boot">
@@ -154,10 +169,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
+    <room>rooms\gg_4</room>
     <room>rooms\gg_1</room>
     <room>rooms\gg_2</room>
     <room>rooms\gg_3</room>
-    <room>rooms\gg_4</room>
     <room>rooms\gg_boss</room>
     <room>rooms\crappy_you_win</room>
   </rooms>

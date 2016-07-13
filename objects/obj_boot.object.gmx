@@ -73,11 +73,11 @@ instance_deactivate_region(view_xview[0] - 64, view_yview - 64, view_wview[0] + 
 
 if (!obj_boot.dead)
 {
-    with(all)
+    if(object_index != obj_solid)
     {
-      if(object_index != obj_solid)
+      with(all)
       {
-        instance_deactivate_all(true); //Deactivate all other instances
+        //instance_deactivate_all(true); //Deactivate all other instances
         instance_activate_region(view_xview[0]-64,view_yview[0]-64,view_wview[0]+128,view_hview[0]+128,true); //Activate all instances just outside of the view
         instance_deactivate_object(obj_enemy); //Deactivate enemies
         instance_activate_region(view_xview[0]-32,view_yview[0]-32,view_wview[0]+32,view_hview[0],true); //Activate all instances inside view
@@ -242,6 +242,42 @@ if (dead = true)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///moving platforms collision
+//v platform
+if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v))
+{
+    objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v)
+    move_outside_solid(90,sprite_height)
+    vspd = -jspd;    
+}
+
+//h platform
+if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h))
+{
+    objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h)
+    move_outside_solid(90,sprite_height)
+    vspd = -jspd;    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="4" ename="obj_boss_hitbox">
       <action>
@@ -393,7 +429,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="115">
+    <event eventtype="9" enumb="115">
       <action>
         <libid>1</libid>
         <id>531</id>
