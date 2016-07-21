@@ -10,6 +10,7 @@
     <sound>sound\snd_lose</sound>
     <sound>sound\bgm_weird_music</sound>
     <sound>sound\bgm_grassy_green</sound>
+    <sound>sound\druggy_weed</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="other_junk">
@@ -57,6 +58,8 @@
     </backgrounds>
     <backgrounds name="signs">
       <background>background\sign_basic</background>
+      <background>background\sign_bee_jails</background>
+      <background>background\sign_bee_jail</background>
       <background>background\sign_snails</background>
       <background>background\sign_ant_dance</background>
       <background>background\sign_footville</background>
@@ -123,6 +126,9 @@
     <script>scripts\scr_set_touch_controls.gml</script>
     <script>scripts\scr_eye_tracking_left.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\rock_salt</font>
+  </fonts>
   <objects name="objects">
     <objects name="blocks">
       <object>objects\obj_solid</object>
@@ -169,10 +175,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
-    <room>rooms\gg_4</room>
     <room>rooms\gg_1</room>
     <room>rooms\gg_2</room>
-    <room>rooms\gg_3</room>
+    <room>rooms\gg_3_bad</room>
     <room>rooms\gg_boss</room>
     <room>rooms\crappy_you_win</room>
   </rooms>

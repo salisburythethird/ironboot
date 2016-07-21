@@ -25,16 +25,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !(obj_boot.dead)
+            <string>///view control
+if instance_exists(obj_boot)
 {
     x += floor((obj_boot.x-x)/15);
     y += floor((obj_boot.y-y)/15);
 }
-else
+/*else
 {
     instance_destroy();
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="115">
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

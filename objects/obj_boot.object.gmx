@@ -73,9 +73,9 @@ instance_deactivate_region(view_xview[0] - 64, view_yview - 64, view_wview[0] + 
 
 if (!obj_boot.dead)
 {
-    if(object_index != obj_solid)
+    with(all)
     {
-      with(all)
+      if(object_index != obj_solid)
       {
         //instance_deactivate_all(true); //Deactivate all other instances
         instance_activate_region(view_xview[0]-64,view_yview[0]-64,view_wview[0]+128,view_hview[0]+128,true); //Activate all instances just outside of the view
@@ -262,17 +262,17 @@ if (dead = true)
 //v platform
 if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v))
 {
-    objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v)
-    move_outside_solid(90,sprite_height)
+    //objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v)
+    move_outside_solid(90,sprite_height);
     vspd = -jspd;    
 }
 
 //h platform
 if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h))
 {
-    objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h)
-    move_outside_solid(90,sprite_height)
-    vspd = -jspd;    
+    //objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h)
+    move_outside_solid(90,sprite_height);
+    vspd = -jspd;
 }
 </string>
           </argument>
@@ -296,7 +296,8 @@ if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_he
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.dangerous)
+            <string>///jump off and damage other
+if (other.dangerous)
 {
     if (bbox_bottom &lt; other.y)
     {
@@ -335,7 +336,8 @@ if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_he
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspd = -jspd;
+            <string>///jump off shell
+vspd = -jspd;
 </string>
           </argument>
         </arguments>
@@ -393,7 +395,8 @@ if (bbox_bottom - vspd &lt; other.bbox_top-other.vspd)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room_next(room) != -1
+            <string>///if next room exists, goto next room
+if room_next(room) != -1
    {
    room_goto(room_next(room));
    }
@@ -423,30 +426,10 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dead = true;
+            <string>///DIE!!!
+
+dead = true;
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="115">
-      <action>
-        <libid>1</libid>
-        <id>531</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_fullscreen</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -468,7 +451,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_restart();
+            <string>///restart the room
+room_restart();
 </string>
           </argument>
         </arguments>

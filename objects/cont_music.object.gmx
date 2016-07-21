@@ -52,6 +52,11 @@ global.playing = false;
             <string>x = view_xview;
 y = view_yview;
 
+if (audio_is_playing(druggy_weed))
+{
+    audio_stop_sound(druggy_weed);
+}
+
 if !(audio_is_playing(bgm_grassy_green))
 {
 audio_play_sound(bgm_grassy_green, 3, true);
