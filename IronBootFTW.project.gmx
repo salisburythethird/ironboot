@@ -12,6 +12,7 @@
     <sound>sound\bgm_grassy_green</sound>
     <sound>sound\druggy_weed</sound>
     <sound>sound\snd_win</sound>
+    <sound>sound\bgm_boss</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="other_junk">
@@ -84,6 +85,8 @@
     </backgrounds>
     <backgrounds name="room_transitions">
       <background>background\level1</background>
+      <background>background\level2</background>
+      <background>background\level3</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths">
@@ -151,6 +154,7 @@
       <object>objects\obj_background_controller</object>
       <object>objects\cont_view</object>
       <object>objects\cont_music</object>
+      <object>objects\cont_boss_music</object>
       <object>objects\effect_screenshake</object>
       <object>objects\cont_fade</object>
     </objects>
@@ -184,7 +188,9 @@
     <room>rooms\main_menu</room>
     <room>rooms\trans_1</room>
     <room>rooms\gg_1</room>
+    <room>rooms\trans_2</room>
     <room>rooms\gg_2</room>
+    <room>rooms\trans_3</room>
     <room>rooms\gg_3</room>
     <room>rooms\gg_boss</room>
     <room>rooms\crappy_you_win</room>
