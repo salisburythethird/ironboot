@@ -11,11 +11,13 @@
     <sound>sound\bgm_weird_music</sound>
     <sound>sound\bgm_grassy_green</sound>
     <sound>sound\druggy_weed</sound>
+    <sound>sound\snd_win</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="other_junk">
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_derp_sun</sprite>
+      <sprite>sprites\spr_room_transition</sprite>
     </sprites>
     <sprites name="iron_boot">
       <sprite>sprites\spr_player_hop</sprite>
@@ -80,6 +82,9 @@
       <background>background\vine_end_side_left</background>
       <background>background\vine_end_side_right</background>
     </backgrounds>
+    <backgrounds name="room_transitions">
+      <background>background\level1</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths">
     <paths name="path_lefteye">
@@ -140,12 +145,14 @@
     </objects>
     <objects name="control">
       <object>objects\obj_play_button</object>
+      <object>objects\obj_room_transition</object>
       <object>objects\obj_level_exit</object>
       <object>objects\obj_deactivation</object>
       <object>objects\obj_background_controller</object>
       <object>objects\cont_view</object>
       <object>objects\cont_music</object>
       <object>objects\effect_screenshake</object>
+      <object>objects\cont_fade</object>
     </objects>
     <objects name="boot">
       <object>objects\obj_boot</object>
@@ -175,9 +182,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
+    <room>rooms\trans_1</room>
     <room>rooms\gg_1</room>
     <room>rooms\gg_2</room>
-    <room>rooms\gg_3_bad</room>
+    <room>rooms\gg_3</room>
     <room>rooms\gg_boss</room>
     <room>rooms\crappy_you_win</room>
   </rooms>

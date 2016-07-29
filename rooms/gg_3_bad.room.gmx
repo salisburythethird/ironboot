@@ -281,6 +281,9 @@
     <instance objName="obj_solid" x="8128" y="384" name="inst_4D45E183" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="8064" y="320" name="inst_083FCC39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_level_exit" x="7936" y="512" name="inst_678E1F90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boundary" x="7296" y="640" name="inst_23F0AB04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boundary" x="7296" y="128" name="inst_5FB53FB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform_v" x="7232" y="576" name="inst_2A1EE51E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="vine_side" x="960" y="432" w="64" h="64" xo="0" yo="0" id="10002366" name="inst_530684B7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -325,6 +328,13 @@
     <tile bgName="balloon" x="2816" y="602" w="64" h="64" xo="0" yo="0" id="10002989" name="inst_B7EEEB88" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="balloon" x="2951" y="585" w="64" h="64" xo="0" yo="0" id="10002990" name="inst_21636C1C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="balloon" x="2901" y="639" w="64" h="64" xo="0" yo="0" id="10002991" name="inst_D8F6F16D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_up" x="7296" y="256" w="64" h="64" xo="0" yo="0" id="10002992" name="inst_3CA0BE1D" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_up" x="7296" y="320" w="64" h="64" xo="0" yo="0" id="10002993" name="inst_3059E671" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_up" x="7296" y="384" w="64" h="64" xo="0" yo="0" id="10002994" name="inst_D02D65B6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_up" x="7296" y="448" w="64" h="64" xo="0" yo="0" id="10002995" name="inst_DC6279E1" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_up" x="7296" y="512" w="64" h="64" xo="0" yo="0" id="10002996" name="inst_9B6A9AA6" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_end_up" x="7296" y="192" w="64" h="64" xo="0" yo="0" id="10002997" name="inst_220D06C7" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="vine_end_down" x="7296" y="576" w="64" h="64" xo="0" yo="0" id="10002998" name="inst_A8EE4C9C" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_2" x="0" y="576" w="64" h="64" xo="0" yo="0" id="10002246" name="inst_CF3E0AEB" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_2" x="64" y="576" w="64" h="64" xo="0" yo="0" id="10002247" name="inst_A5272995" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_2" x="128" y="576" w="64" h="64" xo="0" yo="0" id="10002248" name="inst_7003A195" depth="-1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
