@@ -294,16 +294,38 @@ if (dead = true)
 if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v))
 {
     //objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_v)
-    move_outside_solid(90,sprite_height);
-    vspd = -jspd;    
+    move_outside_solid(90,sprite_height*2);
+    vspd = -jspd;
+    if (hspd != 0)
+    {
+        if (hspd &lt; 0)
+        {
+        hspd += fric;
+        }
+        else
+        {
+            hspd -= fric;
+        }
+    }    
 }
 
 //h platform
 if (position_meeting(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h))
 {
     //objID = instance_position(x-sprite_xoffset+sprite_width/2, y-sprite_yoffset+sprite_height, obj_platform_h)
-    move_outside_solid(90,sprite_height);
+    move_outside_solid(90,sprite_height*2);
     vspd = -jspd;
+    if (hspd != 0)
+    {
+        if (hspd &lt; 0)
+        {
+        hspd += fric;
+        }
+        else
+        {
+            hspd -= fric;
+        }
+    }
 }
 </string>
           </argument>

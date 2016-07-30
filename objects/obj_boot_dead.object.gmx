@@ -73,6 +73,7 @@ depth = -100
             <kind>1</kind>
             <string>///pause music
 audio_pause_sound(bgm_grassy_green);
+audio_pause_sound(bgm_boss);
 </string>
           </argument>
         </arguments>
@@ -96,6 +97,7 @@ audio_pause_sound(bgm_grassy_green);
           <argument>
             <kind>1</kind>
             <string>audio_stop_sound(bgm_grassy_green);
+audio_stop_sound(bgm_boss);
 room_restart();
 </string>
           </argument>

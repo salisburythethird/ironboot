@@ -186,6 +186,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
+    <room>rooms\gg_4</room>
     <room>rooms\trans_1</room>
     <room>rooms\gg_1</room>
     <room>rooms\trans_2</room>
