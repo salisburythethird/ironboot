@@ -13,12 +13,25 @@
     <sound>sound\druggy_weed</sound>
     <sound>sound\snd_win</sound>
     <sound>sound\bgm_boss</sound>
+    <sound>sound\bgm_title</sound>
+    <sound>sound\bgm_victory</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="other_junk">
       <sprite>sprites\spr_play</sprite>
       <sprite>sprites\spr_derp_sun</sprite>
       <sprite>sprites\spr_room_transition</sprite>
+      <sprite>sprites\spr_boss_transition</sprite>
+      <sprite>sprites\num1</sprite>
+      <sprite>sprites\num2</sprite>
+      <sprite>sprites\num3</sprite>
+      <sprite>sprites\num4</sprite>
+      <sprite>sprites\slugzor_icon</sprite>
+      <sprite>sprites\spr_princess</sprite>
+      <sprite>sprites\spr_princess_dead</sprite>
+      <sprite>sprites\spish</sprite>
+      <sprite>sprites\spr_iron_boot_logo</sprite>
+      <sprite>sprites\spr_yay</sprite>
     </sprites>
     <sprites name="iron_boot">
       <sprite>sprites\spr_player_hop</sprite>
@@ -32,6 +45,7 @@
       <sprite>sprites\spr_goal</sprite>
       <sprite>sprites\spr_boundary</sprite>
       <sprite>sprites\spr_moving_platform</sprite>
+      <sprite>sprites\spr_torch</sprite>
     </sprites>
     <sprites name="enemies">
       <sprite>sprites\spr_ant</sprite>
@@ -46,6 +60,7 @@
     </sprites>
     <sprites name="slugzor">
       <sprite>sprites\spr_slugzor_body</sprite>
+      <sprite>sprites\spr_slugzor_dead</sprite>
       <sprite>sprites\spr_slugzor_left_eye</sprite>
       <sprite>sprites\spr_slugzor_right_eye</sprite>
       <sprite>sprites\spr_dead_left</sprite>
@@ -57,6 +72,7 @@
       <background>background\clouds</background>
       <background>background\clouds_2</background>
       <background>background\grassy_green_hills</background>
+      <background>background\dankcave</background>
       <background>background\back_hills</background>
     </backgrounds>
     <backgrounds name="signs">
@@ -69,11 +85,14 @@
     </backgrounds>
     <backgrounds name="random">
       <background>background\balloon</background>
-      <background>background\ib_logo</background>
+      <background>background\bee_jail_foreground</background>
+      <background>background\bee_jail_background</background>
     </backgrounds>
     <backgrounds name="tiles">
+      <background>background\iron_boot_logo</background>
       <background>background\tiles</background>
       <background>background\tile_2</background>
+      <background>background\tile_end</background>
       <background>background\bush_1</background>
       <background>background\bush_2</background>
       <background>background\vine_up</background>
@@ -87,6 +106,9 @@
       <background>background\level1</background>
       <background>background\level2</background>
       <background>background\level3</background>
+      <background>background\level4</background>
+      <background>background\levelBoss</background>
+      <background>background\theend</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths">
@@ -133,6 +155,7 @@
     </scripts>
     <script>scripts\scr_set_touch_controls.gml</script>
     <script>scripts\scr_eye_tracking_left.gml</script>
+    <script>scripts\scr_goto_room.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\rock_salt</font>
@@ -145,10 +168,13 @@
       <object>objects\obj_derp_sun</object>
       <object>objects\obj_platform_v</object>
       <object>objects\obj_platform_h</object>
+      <object>objects\obj_torch</object>
+      <object>objects\obj_yay</object>
     </objects>
     <objects name="control">
       <object>objects\obj_play_button</object>
       <object>objects\obj_room_transition</object>
+      <object>objects\obj_boss_transition</object>
       <object>objects\obj_level_exit</object>
       <object>objects\obj_deactivation</object>
       <object>objects\obj_background_controller</object>
@@ -157,6 +183,13 @@
       <object>objects\cont_boss_music</object>
       <object>objects\effect_screenshake</object>
       <object>objects\cont_fade</object>
+      <object>objects\cont_title_music</object>
+      <object>objects\level_select1</object>
+      <object>objects\level_select2</object>
+      <object>objects\level_select3</object>
+      <object>objects\level_select4</object>
+      <object>objects\level_selectBOOSE</object>
+      <object>objects\obj_splash</object>
     </objects>
     <objects name="boot">
       <object>objects\obj_boot</object>
@@ -173,6 +206,8 @@
       <object>objects\obj_bonk_effect</object>
       <object>objects\obj_fly_horiz</object>
       <object>objects\obj_fly_vert</object>
+      <object>objects\obj_princess</object>
+      <object>objects\obj_princess_dead</object>
       <object>objects\obj_fly_dead</object>
     </objects>
     <objects name="slugzor">
@@ -185,16 +220,21 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\start</room>
+    <room>rooms\splash</room>
     <room>rooms\main_menu</room>
-    <room>rooms\gg_4</room>
     <room>rooms\trans_1</room>
     <room>rooms\gg_1</room>
     <room>rooms\trans_2</room>
     <room>rooms\gg_2</room>
     <room>rooms\trans_3</room>
     <room>rooms\gg_3</room>
+    <room>rooms\trans_4</room>
+    <room>rooms\gg_4</room>
+    <room>rooms\trans_boss</room>
     <room>rooms\gg_boss</room>
-    <room>rooms\crappy_you_win</room>
+    <room>rooms\gg_win</room>
+    <room>rooms\the_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

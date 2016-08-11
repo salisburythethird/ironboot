@@ -3,7 +3,7 @@
   <caption></caption>
   <width>8192</width>
   <height>768</height>
-  <vsnap>64</vsnap>
+  <vsnap>32</vsnap>
   <hsnap>64</hsnap>
   <isometric>0</isometric>
   <speed>40</speed>
@@ -235,15 +235,7 @@
     <instance objName="obj_ant" x="2816" y="640" name="inst_2C0D3425" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ant" x="2912" y="640" name="inst_06C97DE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fly_horiz" x="3616" y="672" name="inst_1784B8F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="4864" y="-32" name="inst_47B9D409" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="5056" y="-32" name="inst_1F61BA11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="5248" y="-32" name="inst_78457D2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="4864" y="288" name="inst_D390F6C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="5056" y="288" name="inst_8D7A3411" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_boundary" x="5248" y="288" name="inst_396F76FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fly_vert" x="4896" y="160" name="inst_1F96A0D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fly_vert" x="5088" y="224" name="inst_B3996598" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fly_vert" x="5280" y="96" name="inst_A4BB1EEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="death_block" x="6336" y="736" name="inst_9FD00D10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="death_block" x="6400" y="736" name="inst_32CF0A13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="death_block" x="6464" y="736" name="inst_93D40BA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -252,6 +244,8 @@
     <instance objName="obj_solid" x="576" y="704" name="inst_B16AE651" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="896" y="704" name="inst_B1DEF186" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid" x="832" y="704" name="inst_3A1B0E68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boundary" x="5056" y="288" name="inst_252DCBA8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boundary" x="5056" y="-32" name="inst_9FE05E52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bush_2" x="192" y="640" w="128" h="64" xo="0" yo="0" id="10001792" name="inst_B68354A2" depth="1" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -57,10 +57,19 @@ if (audio_is_playing(druggy_weed))
     audio_stop_sound(druggy_weed);
 }
 
+if (audio_is_playing(bgm_boss))
+{
+    audio_stop_sound(bgm_boss);
+}
+
+if (audio_is_playing(bgm_title))
+{
+    audio_stop_sound(bgm_title);
+}
+
 if !(audio_is_playing(bgm_grassy_green))
 {
-audio_play_sound(bgm_grassy_green, 3, true);
-global.playing = true
+    audio_play_sound(bgm_grassy_green, 3, true);
 }
 
 </string>

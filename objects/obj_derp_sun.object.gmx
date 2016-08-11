@@ -53,6 +53,20 @@ if !(audio_is_playing(druggy_weed))
 {
 audio_play_sound(druggy_weed, 3, true);
 }
+if (audio_is_playing(bgm_grassy_green))
+{
+    audio_stop_sound(bgm_grassy_green);
+}
+
+if (audio_is_playing(bgm_boss))
+{
+    audio_stop_sound(bgm_boss);
+}
+
+if (audio_is_playing(bgm_title))
+{
+    audio_stop_sound(bgm_title);
+}
 
 </string>
           </argument>

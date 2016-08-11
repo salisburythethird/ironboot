@@ -28,6 +28,9 @@
             <string>///set depth and alive
 depth = 1;
 alive = true;
+a = 0;
+fade = 1;
+global.won = false;
 </string>
           </argument>
         </arguments>
@@ -53,6 +56,7 @@ alive = true;
             <string>///random location for explosion
 poof_x = random_range(bbox_left, bbox_right);
 poof_y = random_range(bbox_top, bbox_bottom);
+
 </string>
           </argument>
         </arguments>
@@ -138,6 +142,112 @@ poof_y = random_range(bbox_top, bbox_bottom);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>201</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_create_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>cont_fade</object>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>-1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!audio_is_playing(bgm_victory))
+{
+    audio_play_sound(bgm_victory, 3, 1);
+}
+sprite_index = spr_slugzor_dead;
+x -= 128
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>300</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -162,17 +272,13 @@ if (instance_exists(obj_slugzor_left_eye) and instance_exists(obj_slugzor_right_
     spd = obj_slugzor_left_eye.hp + obj_slugzor_right_eye.hp
 }
 
-if spd = 10 image_speed = 0.1;
-if spd = 9 image_speed = 0.2;
-if spd = 8 image_speed = 0.3;
-if spd = 7 image_speed = 0.4;
-if spd = 6 image_speed = 0.5;
-if spd = 5 image_speed = 0.6;
-if spd = 4 image_speed = 0.7;
-if spd = 3 image_speed = 0.8;
-if spd = 2 image_speed = 0.9;
-if spd = 1 image_speed = 1;
-if spd = 0 image_speed = 1;
+if spd = 6 image_speed = 0.1;
+if spd = 5 image_speed = 0.2;
+if spd = 4 image_speed = 0.3;
+if spd = 3 image_speed = 0.4;
+if spd = 2 image_speed = 0.5;
+if spd = 1 image_speed = 0.6;
+if spd = 0 image_speed = 0.7;
 </string>
           </argument>
         </arguments>
@@ -197,7 +303,13 @@ if spd = 0 image_speed = 1;
 if (!instance_exists(obj_slugzor_left_eye) and !instance_exists(obj_slugzor_right_eye) and alive)
 {
     alarm[10] = 20;
+    alarm[0] = 200;
     alive = false;
+    with(cont_boss_music)
+    {
+        instance_destroy();
+    }
+    audio_stop_sound(bgm_boss);
     show_debug_message('dead!!');
 }
 </string>
