@@ -37,6 +37,7 @@
       <sprite>sprites\spr_player_hop</sprite>
       <sprite>sprites\spr_player_stand</sprite>
       <sprite>sprites\spr_boot_dead</sprite>
+      <sprite>sprites\spr_boot_poof</sprite>
     </sprites>
     <sprites name="textures">
       <sprite>sprites\spr_grass</sprite>
@@ -194,6 +195,7 @@
     <objects name="boot">
       <object>objects\obj_boot</object>
       <object>objects\obj_boot_dead</object>
+      <object>objects\obj_boot_poof</object>
     </objects>
     <objects name="enemies">
       <object>objects\obj_ant_dead</object>

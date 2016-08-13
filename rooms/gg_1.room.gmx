@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>40</speed>
   <persistent>0</persistent>
-  <colour>16701344</colour>
+  <colour>16771961</colour>
   <showcolour>-1</showcolour>
   <code>//audio_play_sound(bgm_weird_music, 4, true);</code>
   <enableViews>-1</enableViews>
